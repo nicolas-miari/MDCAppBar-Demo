@@ -11,9 +11,12 @@
 		1FF5EB5C233997050043E43C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF5EB5A233997050043E43C /* Main.storyboard */; };
 		1FF5EB5E233997060043E43C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FF5EB5D233997060043E43C /* Assets.xcassets */; };
 		1FF5EB61233997060043E43C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF5EB5F233997060043E43C /* LaunchScreen.storyboard */; };
-		1FF5EB6A233998E60043E43C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF5EB69233998E60043E43C /* TableViewController.swift */; };
 		1FF5EB6C233999A80043E43C /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF5EB6B233999A80043E43C /* ItemListViewController.swift */; };
 		1FF5EB6E23399A560043E43C /* ItemList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF5EB6D23399A560043E43C /* ItemList.storyboard */; };
+		1FF5EB7023399CE70043E43C /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF5EB6F23399CE70043E43C /* ItemCell.swift */; };
+		1FF5EB7223399D5C0043E43C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF5EB7123399D5C0043E43C /* String+Extensions.swift */; };
+		1FF5EB7423399EA30043E43C /* ItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF5EB7323399EA30043E43C /* ItemListViewModel.swift */; };
+		1FF5EB762339A1CF0043E43C /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF5EB752339A1CF0043E43C /* MainTableViewController.swift */; };
 		5FC5A328B456B4AD96BA4FE5 /* Pods_MDCAppBarDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB1042B1609AB72B6054D3D /* Pods_MDCAppBarDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,10 +27,12 @@
 		1FF5EB5D233997060043E43C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FF5EB60233997060043E43C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FF5EB62233997060043E43C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1FF5EB68233997170043E43C /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		1FF5EB69233998E60043E43C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		1FF5EB6B233999A80043E43C /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 		1FF5EB6D23399A560043E43C /* ItemList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemList.storyboard; sourceTree = "<group>"; };
+		1FF5EB6F23399CE70043E43C /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		1FF5EB7123399D5C0043E43C /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		1FF5EB7323399EA30043E43C /* ItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModel.swift; sourceTree = "<group>"; };
+		1FF5EB752339A1CF0043E43C /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		7BB1042B1609AB72B6054D3D /* Pods_MDCAppBarDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MDCAppBarDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F365138D0F9842F8A65B037 /* Pods-MDCAppBarDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDCAppBarDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MDCAppBarDemo/Pods-MDCAppBarDemo.release.xcconfig"; sourceTree = "<group>"; };
 		FC41EAB3FF60AE9744944897 /* Pods-MDCAppBarDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MDCAppBarDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MDCAppBarDemo/Pods-MDCAppBarDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,16 +72,26 @@
 			isa = PBXGroup;
 			children = (
 				1FF5EB56233997050043E43C /* AppDelegate.swift */,
-				1FF5EB69233998E60043E43C /* TableViewController.swift */,
-				1FF5EB6B233999A80043E43C /* ItemListViewController.swift */,
-				1FF5EB6D23399A560043E43C /* ItemList.storyboard */,
+				1FF5EB752339A1CF0043E43C /* MainTableViewController.swift */,
 				1FF5EB5A233997050043E43C /* Main.storyboard */,
+				1FF5EB772339A1D90043E43C /* ItemList */,
+				1FF5EB7123399D5C0043E43C /* String+Extensions.swift */,
 				1FF5EB5D233997060043E43C /* Assets.xcassets */,
 				1FF5EB5F233997060043E43C /* LaunchScreen.storyboard */,
 				1FF5EB62233997060043E43C /* Info.plist */,
-				1FF5EB68233997170043E43C /* Podfile */,
 			);
 			path = MDCAppBarDemo;
+			sourceTree = "<group>";
+		};
+		1FF5EB772339A1D90043E43C /* ItemList */ = {
+			isa = PBXGroup;
+			children = (
+				1FF5EB6B233999A80043E43C /* ItemListViewController.swift */,
+				1FF5EB6D23399A560043E43C /* ItemList.storyboard */,
+				1FF5EB7323399EA30043E43C /* ItemListViewModel.swift */,
+				1FF5EB6F23399CE70043E43C /* ItemCell.swift */,
+			);
+			path = ItemList;
 			sourceTree = "<group>";
 		};
 		CA5E6249C88A8EA71FB97868 /* Frameworks */ = {
@@ -221,8 +236,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF5EB7223399D5C0043E43C /* String+Extensions.swift in Sources */,
+				1FF5EB762339A1CF0043E43C /* MainTableViewController.swift in Sources */,
+				1FF5EB7423399EA30043E43C /* ItemListViewModel.swift in Sources */,
+				1FF5EB7023399CE70043E43C /* ItemCell.swift in Sources */,
 				1FF5EB6C233999A80043E43C /* ItemListViewController.swift in Sources */,
-				1FF5EB6A233998E60043E43C /* TableViewController.swift in Sources */,
 				1FF5EB57233997050043E43C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

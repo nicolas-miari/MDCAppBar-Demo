@@ -12,7 +12,7 @@
         <!--Demo-->
         <scene sceneID="RmH-eV-to1">
             <objects>
-                <tableViewController id="4RI-gB-Q9K" customClass="TableViewController" customModule="MDCAppBarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="4RI-gB-Q9K" customClass="MainTableViewController" customModule="MDCAppBarDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="85D-8r-ZQJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

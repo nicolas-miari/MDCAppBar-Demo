@@ -9,7 +9,7 @@
 import UIKit
 import MaterialComponents.MaterialAppBar
 
-class TableViewController: UITableViewController {
+class MainTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +67,7 @@ class TableViewController: UITableViewController {
 
 // MARK: - MDCAppBarNavigationControllerDelegate
 
-extension TableViewController: MDCAppBarNavigationControllerDelegate {
+extension MainTableViewController: MDCAppBarNavigationControllerDelegate {
 
     func appBarNavigationController(
         _ navigationController: MDCAppBarNavigationController,
